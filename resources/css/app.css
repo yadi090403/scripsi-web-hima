@@ -1,0 +1,908 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/kegiatan.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'kegiatan-form.css';
+@import 'kegiatan-form-override.css';
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* ============================================
+   CUSTOM STYLES UNTUK HIMA NJ - FITUR KEGIATAN
+   ============================================ */
+
+/* 1. Utility Classes */
+.bg-purple {
+    background-color: #6f42c1 !important;
+}
+
+.bg-gray {
+    background-color: #6c757d !important;
+}
+
+.badge-lg {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+}
+
+/* 2. Avatar & Images */
+.avatar-sm {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+}
+
+.avatar-md {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+}
+
+.card-img-hover {
+    transition: transform 0.3s ease;
+}
+
+.card-img-hover:hover {
+    transform: scale(1.05);
+}
+
+/* 3. Table Improvements */
+.table-hover tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+    cursor: pointer;
+}
+
+.table-hover tbody tr:hover td a.text-primary {
+    color: #0a58ca !important;
+    text-decoration: underline !important;
+}
+
+/* 4. Upload Area Styling */
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.02);
+}
+
+/* 5. Card Hover Effects */
+.border-hover {
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+.border-hover:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* 6. Tab Content */
+.tab-content {
+    min-height: 300px;
+}
+
+/* 7. Progress Bar Custom */
+.progress {
+    border-radius: 4px;
+}
+
+.progress-sm {
+    height: 6px;
+}
+
+.progress-md {
+    height: 8px;
+}
+
+/* 8. Status Badges Custom */
+.badge-status-rencana {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-status-berlangsung {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.badge-status-selesai {
+    background-color: #198754;
+    color: white;
+}
+
+.badge-status-dibatalkan {
+    background-color: #dc3545;
+    color: white;
+}
+
+.badge-status-arsip {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* 9. Kategori Badges */
+.badge-kategori-seminar {
+    background-color: #0dcaf0;
+    color: #212529;
+}
+
+.badge-kategori-pelatihan {
+    background-color: #198754;
+    color: white;
+}
+
+.badge-kategori-lomba {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-kategori-rapat {
+    background-color: #6c757d;
+    color: white;
+}
+
+.badge-kategori-sosial {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.badge-kategori-internal {
+    background-color: #212529;
+    color: white;
+}
+
+.badge-kategori-eksternal {
+    background-color: #6f42c1;
+    color: white;
+}
+
+/* 10. Pagination Custom */
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.pagination .page-link {
+    color: #0d6efd;
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+/* 11. Modal Custom */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* 12. Form Controls */
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* 13. Button Groups */
+.btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* 14. Alert Custom */
+.alert-custom {
+    border-left: 4px solid;
+}
+
+.alert-custom-info {
+    border-left-color: #0dcaf0;
+}
+
+.alert-custom-success {
+    border-left-color: #198754;
+}
+
+.alert-custom-warning {
+    border-left-color: #ffc107;
+}
+
+.alert-custom-danger {
+    border-left-color: #dc3545;
+}
+
+/* 15. Image Placeholder */
+.img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+/* 16. Breadcrumb Custom */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d;
+}
+
+/* 17. Link Hover Effects */
+a.text-decoration-none:hover {
+    text-decoration: underline !important;
+}
+
+/* 18. Badge Pill Custom */
+.badge-pill-custom {
+    border-radius: 50rem;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+/* 19. Tooltip Custom */
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.custom-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 20. Loading Spinner */
+.spinner-custom {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25em;
+}
+
+/* 21. Truncate Text */
+.text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 22. Dropdown Custom */
+.dropdown-menu {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 23. Card Header Gradient */
+.card-header-gradient {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+    color: white;
+}
+
+/* 24. Responsive Adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+
+    .badge {
+        font-size: 0.75em;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* 25. Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .card {
+        border: 1px solid #000;
+        box-shadow: none;
+    }
+}
+
+/* 26. Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    .bg-light {
+        background-color: #2d3748 !important;
+        color: #e2e8f0;
+    }
+
+    .text-muted {
+        color: #a0aec0 !important;
+    }
+}
+
+/* 27. Animation Classes */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* 28. Scrollbar Custom */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 29. Grid Layout for Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* 30. Print Button */
+.btn-print {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.btn-print:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+/* 31. Calendar View Styles */
+.calendar-day {
+    border: 1px solid #dee2e6;
+    min-height: 100px;
+    padding: 0.5rem;
+}
+
+.calendar-day.today {
+    background-color: #e7f1ff;
+    border-color: #0d6efd;
+}
+
+.calendar-day.has-event {
+    background-color: #d1ecf1;
+}
+
+/* 32. Rating Stars */
+.rating-stars {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+
+/* 33. Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.3rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #0d6efd;
+}
+
+/* 34. Kanban Board Styles */
+.kanban-column {
+    background-color: #f8f9fa;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    min-height: 500px;
+}
+
+.kanban-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: move;
+}
+
+.kanban-card:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 35. Statistics Cards */
+.stat-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.stat-card .stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stat-card .stat-label {
+    opacity: 0.9;
+    font-size: 0.875rem;
+}
+
+/* 36. File Upload Preview */
+.file-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.file-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.file-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.file-preview .remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(220, 53, 69, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* 37. QR Code Styling */
+.qr-code-container {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.375rem;
+    display: inline-block;
+    border: 1px solid #dee2e6;
+}
+
+/* 38. Countdown Timer */
+.countdown-timer {
+    font-family: monospace;
+    font-size: 1.5rem;
+    background-color: #212529;
+    color: #0dcaf0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+}
+
+/* 39. Certificate Preview */
+.certificate-preview {
+    background-color: #f8f0e3;
+    border: 2px solid #d4a76a;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    min-height: 400px;
+    position: relative;
+}
+
+.certificate-border {
+    border: 1px solid #d4a76a;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+/* 40. Comment/Note Styling */
+.comment-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0d6efd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* 41. Priority Indicators */
+.priority-high {
+    border-left: 4px solid #dc3545;
+}
+
+.priority-medium {
+    border-left: 4px solid #ffc107;
+}
+
+.priority-low {
+    border-left: 4px solid #198754;
+}
+
+/* 42. Progress Circle */
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.progress-circle svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progress-circle .progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* 43. Notification Bell */
+.notification-bell {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-bell .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    min-width: 1rem;
+}
+
+/* 44. Search Highlight */
+.highlight {
+    background-color: #fff3cd;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+}
+
+/* 45. Floating Action Button */
+.fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* 46. Step Progress */
+.step-progress {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.step-progress::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #dee2e6;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step.active {
+    border-color: #0d6efd;
+    background-color: #0d6efd;
+    color: white;
+}
+
+.step.completed {
+    border-color: #198754;
+    background-color: #198754;
+    color: white;
+}
+
+/* 47. Tag Input */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    min-height: 42px;
+}
+
+.tag {
+    background-color: #e9ecef;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tag .remove-tag {
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.tag .remove-tag:hover {
+    color: #dc3545;
+}
+
+/* 48. Weather Widget Style */
+.weather-widget {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.weather-temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* 49. Chart Container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* 50. Signature Pad */
+.signature-pad {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    background-color: white;
+    cursor: crosshair;
+}
+
+/* END OF CUSTOM STYLES */
+
+/* Animasi untuk kartu dashboard */
+.backup-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.backup-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Efek shimmer pada hover */
+.backup-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.7s;
+}
+
+.backup-card:hover::before {
+    left: 100%;
+}
+
+/* Efek fade in untuk konten */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dashboard Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Staggered animations */
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+.animate-delay-600 { animation-delay: 0.6s; }
+.animate-delay-700 { animation-delay: 0.7s; }
+.animate-delay-800 { animation-delay: 0.8s; }
+.animate-delay-900 { animation-delay: 0.9s; }
+.animate-delay-1000 { animation-delay: 1.0s; }

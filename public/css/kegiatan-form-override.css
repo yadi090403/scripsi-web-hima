@@ -1,0 +1,404 @@
+/* ============================================
+   Kegiatan Form Override - Strong Override CSS
+   (copied to public for immediate browser loading)
+   ============================================ */
+
+:root {
+	--primary-color: #0066cc !important;
+	--primary-dark: #0052a3 !important;
+	--secondary-color: #27ae60 !important;
+	--warning-color: #ff9800 !important;
+	--danger-color: #dc3545 !important;
+	--light-bg: #f8f9fa !important;
+	--border-color: #e0e0e0 !important;
+	--text-dark: #1a1a1a !important;
+	--text-muted: #666 !important;
+	--text-light: #999 !important;
+}
+
+/* Main Container */
+.kegiatan-form-container {
+	background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%) !important;
+	margin: 0 !important;
+	padding: 32px 32px 24px 32px !important;
+	border-radius: 0 0 16px 16px !important;
+	width: 100% !important;
+}
+
+/* Header Section */
+.kegiatan-header {
+	margin-bottom: 40px !important;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.kegiatan-breadcrumb {
+	background-color: transparent !important;
+	padding: 0 !important;
+	margin: 0 0 20px 0 !important;
+	display: flex !important;
+	gap: 8px !important;
+}
+
+.kegiatan-breadcrumb .breadcrumb-item {
+	display: inline-block !important;
+}
+
+.kegiatan-breadcrumb .breadcrumb-item a {
+	color: #0066cc !important;
+	text-decoration: none !important;
+	font-weight: 500 !important;
+	transition: all 0.3s ease !important;
+	font-size: 0.9rem !important;
+}
+
+.kegiatan-breadcrumb .breadcrumb-item a:hover {
+	text-decoration: underline !important;
+}
+
+.kegiatan-breadcrumb .breadcrumb-item.active {
+	color: #666 !important;
+	font-size: 0.9rem !important;
+}
+
+/* Title */
+.kegiatan-title {
+	color: #1a1a1a !important;
+	font-size: 1.8rem !important;
+	font-weight: 700 !important;
+	margin: 20px 0 10px 0 !important;
+	line-height: 1.2 !important;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.kegiatan-title i {
+	color: #0066cc !important;
+	font-size: 1.6rem !important;
+	margin-right: 15px !important;
+}
+
+.kegiatan-description {
+	color: #666 !important;
+	font-size: 1rem !important;
+	margin: 0 0 30px 0 !important;
+}
+
+/* Card Styling */
+.kegiatan-card {
+	border: none !important;
+	border-radius: 14px !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+	overflow: hidden !important;
+	margin-bottom: 30px !important;
+	background: white !important;
+}
+
+.kegiatan-card-header {
+	background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%) !important;
+	border: none !important;
+	padding: 24px !important;
+	position: relative !important;
+}
+
+.kegiatan-card-header h5 {
+	color: white !important;
+	font-weight: 600 !important;
+	font-size: 1.1rem !important;
+	margin: 0 !important;
+}
+
+.kegiatan-card-body {
+	padding: 30px !important;
+}
+
+/* Form Section */
+.form-section {
+	margin-bottom: 30px !important;
+}
+
+.form-section-header {
+	color: #1a1a1a !important;
+	font-size: 1rem !important;
+	font-weight: 700 !important;
+	margin-bottom: 25px !important;
+	padding-bottom: 20px !important;
+	border-bottom: 2px solid #f8f9fa !important;
+	display: flex !important;
+	align-items: center !important;
+	gap: 12px !important;
+}
+
+.form-section-icon {
+	width: 40px !important;
+	height: 40px !important;
+	border-radius: 8px !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	font-size: 1rem !important;
+	flex-shrink: 0 !important;
+}
+
+.form-section-icon.info {
+	background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
+	color: #0066cc !important;
+}
+
+.form-section-icon.time {
+	background: linear-gradient(135deg, #e3f5e9 0%, #c8e6c9 100%) !important;
+	color: #27ae60 !important;
+}
+
+.form-section-icon.photo {
+	background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%) !important;
+	color: #ff9800 !important;
+}
+
+.form-section-icon.settings {
+	background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%) !important;
+	color: #9c27b0 !important;
+}
+
+.form-label {
+	font-weight: 600 !important;
+	color: #1a1a1a !important;
+	font-size: 0.9rem !important;
+	margin-bottom: 8px !important;
+	display: block !important;
+}
+
+.form-control {
+	border-radius: 8px !important;
+	border: 1.5px solid #e0e0e0 !important;
+	padding: 10px 14px !important;
+	font-size: 0.95rem !important;
+	transition: all 0.3s ease !important;
+	background-color: white !important;
+	width: 100% !important;
+}
+
+.form-control:focus {
+	border-color: #0066cc !important;
+	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25) !important;
+	outline: none !important;
+}
+
+.form-select {
+	border-radius: 8px !important;
+	border: 1.5px solid #e0e0e0 !important;
+	padding: 10px 14px !important;
+	font-size: 0.95rem !important;
+	transition: all 0.3s ease !important;
+	background-color: white !important;
+	width: 100% !important;
+}
+
+.form-select:focus {
+	border-color: #0066cc !important;
+	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25) !important;
+	outline: none !important;
+}
+
+/* Textarea */
+textarea.form-control {
+	resize: vertical !important;
+	min-height: 120px !important;
+}
+
+/* Grid Layout */
+.form-row-2 {
+	display: grid !important;
+	grid-template-columns: 1fr 1fr !important;
+	gap: 20px !important;
+}
+
+/* Upload Area */
+.upload-area {
+	border: 2px dashed #e0e0e0 !important;
+	border-radius: 12px !important;
+	background-color: #f8f9fa !important;
+	transition: all 0.3s ease !important;
+	cursor: pointer !important;
+	padding: 40px 20px !important;
+	text-align: center !important;
+}
+
+.upload-area:hover {
+	border-color: #0066cc !important;
+	background-color: rgba(0, 102, 204, 0.02) !important;
+}
+
+.upload-area.dragover {
+	border-color: #0066cc !important;
+	background-color: rgba(0, 102, 204, 0.05) !important;
+}
+
+/* Action Buttons */
+.form-actions {
+	display: flex !important;
+	justify-content: space-between !important;
+	gap: 15px !important;
+	padding-top: 30px !important;
+	margin-top: 30px !important;
+	border-top: 2px solid #f8f9fa !important;
+}
+
+.btn-form {
+	border: none !important;
+	border-radius: 8px !important;
+	padding: 11px 28px !important;
+	font-weight: 500 !important;
+	transition: all 0.3s ease !important;
+	cursor: pointer !important;
+	font-size: 0.95rem !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+	text-decoration: none !important;
+}
+
+.btn-form-cancel {
+	background-color: #e0e0e0 !important;
+	color: #1a1a1a !important;
+}
+
+.btn-form-cancel:hover {
+	background-color: #d0d0d0 !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-form-submit {
+	background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%) !important;
+	color: white !important;
+	box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25) !important;
+}
+
+.btn-form-submit:hover {
+	transform: translateY(-2px) !important;
+	box-shadow: 0 6px 16px rgba(0, 102, 204, 0.35) !important;
+}
+
+/* Sidebar */
+.kegiatan-sidebar {
+	position: sticky !important;
+	top: 20px !important;
+}
+
+.sidebar-card {
+	border: none !important;
+	border-radius: 14px !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+	overflow: hidden !important;
+	margin-bottom: 20px !important;
+	background: white !important;
+}
+
+.sidebar-card-header {
+	background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%) !important;
+	border: none !important;
+	padding: 20px !important;
+}
+
+.sidebar-card-header h6 {
+	color: white !important;
+	font-weight: 600 !important;
+	margin: 0 !important;
+}
+
+.sidebar-card-body {
+	padding: 20px !important;
+}
+
+.tips-box {
+	border-left: 4px solid !important;
+	border-radius: 8px !important;
+	padding: 16px !important;
+	margin-bottom: 20px !important;
+}
+
+.tips-box.info {
+	background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
+	border-color: #0066cc !important;
+}
+
+.tips-box.warning {
+	background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%) !important;
+	border-color: #ff9800 !important;
+}
+
+.tips-box h6 {
+	font-weight: 600 !important;
+	margin-bottom: 10px !important;
+}
+
+.tips-box ul,
+.tips-box ol {
+	color: #1a1a1a !important;
+	font-size: 0.9rem !important;
+	margin-bottom: 0 !important;
+}
+
+.tips-box li {
+	margin-bottom: 6px !important;
+}
+
+/* Status Badges */
+.status-badge {
+	padding: 4px 8px !important;
+	border-radius: 4px !important;
+	font-size: 0.75rem !important;
+	font-weight: 600 !important;
+	display: inline-block !important;
+}
+
+.status-badge.rencana {
+	background-color: #fff3cd !important;
+	color: #664d03 !important;
+}
+
+.status-badge.berlangsung {
+	background-color: #cfe2ff !important;
+	color: #084298 !important;
+}
+
+.status-badge.selesai {
+	background-color: #d1e7dd !important;
+	color: #0f5132 !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+	.form-row-2 {
+		grid-template-columns: 1fr !important;
+	}
+
+	.kegiatan-sidebar {
+		position: static !important;
+		margin-top: 30px !important;
+	}
+}
+
+@media (max-width: 576px) {
+	.kegiatan-form-container {
+		padding: 20px 16px 16px 16px !important;
+	}
+
+	.kegiatan-card-body {
+		padding: 20px !important;
+	}
+
+	.kegiatan-title {
+		font-size: 1.4rem !important;
+	}
+
+	.form-row-2 {
+		grid-template-columns: 1fr !important;
+	}
+
+	.btn-form {
+		width: 100% !important;
+		justify-content: center !important;
+	}
+}
